@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+タスクの作成
+{% endblock %}
+
+{% block body %}
+<h1>タスクの作成</h1>
+{{ form_start(form, {'action': path('tasks_new'), 'method': 'POST'}) }}
+    {{ form_widget(form) }}
+{{ form_end(form) }}
+{% endblock %}

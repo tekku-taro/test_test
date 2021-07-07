@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+<h1>タスク一覧  
+<a href="/tasks/new" alt="" class="btn btn-primary">新規作成</a>
+</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">期限</th>
+      <th scope="col">タスク内容</th>
+      <th scope="col">操作</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for task in tasks %}
+<tr>
+    <td>{{ task.dueDate.format('Y-m-d') }}</td>
+    <td>{{ task.content }}</td>
+    <td>
+    </td>
+</tr>
+{% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}
