@@ -6,10 +6,10 @@
 
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item  active">
+      <li class="nav-item  {{ app.request.get('_route') == 'tasks_index' ? 'active':'' }}">
         <a class="nav-link" href="{{ path('tasks_index') }}">タスク一覧 <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item {{ app.request.get('_route') == 'tasks_new' ? 'active':'' }}">
         <a class="nav-link" href="{{ path('tasks_new') }}">タスク新規作成</a>
       </li>
     </ul>

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+タスクの編集
+{% endblock %}
+
+{% block body %}
+<h1>タスクの編集</h1>
+{{ form_start(form, {'action': path('tasks_update', {'id': task.id}), 'method': 'PUT'}) }}
+    {{ form_widget(form) }}
+{{ form_end(form) }}
+{% endblock %}
